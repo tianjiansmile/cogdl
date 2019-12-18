@@ -103,5 +103,5 @@ for root, dirs, files in os.walk(os.path.dirname(__file__)):
             if not pyg and model_name.startswith("pyg"):
                 continue
             model_name = os.path.join(root, model_name)
-            model_name = model_name[model_name.find("models"):].replace('/', '.')
+            model_name = model_name[model_name.find("models"):].replace('\\', '.')
             module = importlib.import_module("cogdl." + model_name)
